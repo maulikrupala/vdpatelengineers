@@ -594,7 +594,8 @@ input[type=checkbox]+label .icon {
     color: #0da574;
     letter-spacing: 1px;
     font-family: Archivo,sans-serif;
-    font-weight: 600
+    font-weight: 600;
+    padding-top: 20px;
 }
 
 .link-arrow--alt {
@@ -754,7 +755,12 @@ input[type=checkbox]+label .icon {
 
 .primary-bg {
     background: #1FACA6;
-    color: #fff
+    color: #fff;
+    background: url("./../img/construction.jpg");
+    color:#fff; 
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    background-size: cover;
 }
 
 .primary-bg .checklist_item .icon {
@@ -2198,45 +2204,56 @@ html[dir=rtl] #scrollTrigger {
 
 .services_list {
     display: grid;
-    grid-gap: 30px
+    grid-gap: 30px;
+    grid-template-columns: repeat(4);
 }
 
 .services_list-item .services_header .text {
     color: #162739
 }
 
-.services_list-item .wrapper {
+.services_list-item {
     border: 1px solid #c8c8c8;
-    padding: 30px;
+}
+
+.services_list-item .wrapper {
+    /* padding: 30px; */
+    height: 250px;
     -webkit-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out
+}
+
+.mini-wrapper {
+    padding: 10px 10px 10px 10px;
 }
 
 .services_list-item .wrapper:hover {
     border-color: #0da574
 }
 
-.services_list-item .wrapper .number {
+/* .services_list-item .wrapper .number {
     color: #e9e6e6;
     font-family: Archivo,sans-serif;
     font-weight: 800;
     font-size: 36px;
     line-height: 40px
-}
+} */
 
 .services_list-item .wrapper .title {
-    margin: 20px 0
+    margin-bottom: 20px 
 }
 
 .services_list-item .wrapper .description {
     margin-bottom: 40px;
-    color: #202c38
+    color: black;
+    font-size: small;
 }
+
 
 @media screen and (min-width:567.98px) {
     .services_list-item .wrapper {
-        padding: 40px
+        /* padding: 40px */
     }
 
     .services_list-item .number {
@@ -2259,7 +2276,7 @@ html[dir=rtl] #scrollTrigger {
     }
 
     .services_list-item .wrapper {
-        padding: 30px;
+        padding: 20px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -2269,16 +2286,19 @@ html[dir=rtl] #scrollTrigger {
         flex-direction: column
     }
 
-    .services_list-item .wrapper .description {
+    .services_list-item .wrapper  {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
-        flex-grow: 1
+        flex-grow: 1;
+    }
+    .description {
+        font-size: 12px;
     }
 }
 
 @media screen and (min-width:1023.98px) {
     .services_list-item .wrapper {
-        padding: 40px
+        /* padding: 40px */
     }
 
     .services_list-item .wrapper .number {
@@ -2289,7 +2309,7 @@ html[dir=rtl] #scrollTrigger {
 
 @media screen and (min-width:1279.98px) {
     .services_list {
-        grid-template-columns: repeat(3,1fr)
+        grid-template-columns: repeat(4,1fr)
     }
 }
 
